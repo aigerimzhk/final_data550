@@ -1,0 +1,46 @@
+---
+title: "Cleveland Heart Disease Report"
+author: "Aigerim"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+# Introduction
+
+The UCI Cleveland Heart Disease dataset contains clinical information on 303 patients. 
+The dataset includes variables such as age, sex, chest pain type, resting blood pressure, 
+serum cholesterol, maximum heart rate, exercise-induced angina, and a diagnostic outcome 
+indicating the presence or absence of heart disease.
+
+The objective of this analysis is to describe the characteristics of patients in the 
+dataset and compare patients with and without heart disease. 
+
+
+# Sample characteristics
+
+Table 1 compares patient characteristics by their heart disease status. Participants with heart disease were older on average than patients without heart disease. A larger proportion of participants with heart disease were male. Patients with heart disease also had higher mean resting blood pressure, higher serum cholesterol, lower maximum heart rate, and greater ST depression. Statistically significant differences between the two groups were observed for all characteristics included in the table.
+
+```{r table, echo=FALSE, message=FALSE}
+
+here::i_am("Heart-Disease-Report.Rmd")
+
+table1 <- readRDS(
+  here::here("output", "table1.rds")
+)
+
+table1
+
+```
+
+# Age and ST depression by Heart Disease Status
+
+The scatterplot shows the relationship between age and ST depression, stratified by heart disease status.ST depression tends to increase slightly with age in both groups. Participants with heart disease tend to have higher ST depression than participants without heart disease across ages.
+
+```{r figure, echo=FALSE, message=FALSE}
+figure1 <- readRDS(
+  here::here("output", "figure1.rds")
+)
+
+figure1
+```
+
