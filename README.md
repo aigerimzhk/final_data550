@@ -15,7 +15,7 @@
 
 
 `code/render_report.R`
--renders the R Markdown file to create a report
+- renders the R Markdown file to create a report
 
 
 `Heart-Disease_Report.Rmd`
